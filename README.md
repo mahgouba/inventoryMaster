@@ -174,4 +174,4 @@ For support and questions, please open an issue on GitHub or contact the develop
 
 ---
 
-Built with ❤️ for Arabic-speaking businesses and organizations.
+Built with ❤️ for Arabic-speaking businesses and organizations.# inventoryMaster0
