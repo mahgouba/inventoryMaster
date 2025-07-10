@@ -910,11 +910,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const id = parseInt(req.params.id);
       const { logo } = req.body;
       
-      if (!logo) {
+      // Allow empty string to delete logo
+      if (logo === undefined) {
         return res.status(400).json({ message: "Logo data is required" });
       }
 
-      const manufacturer = await storage.updateManufacturerLogo(id, logo);
+      const manufacturer = await storage.updateManufacturerLogo(id, logo || null);
       if (manufacturer) {
         res.json(manufacturer);
       } else {
